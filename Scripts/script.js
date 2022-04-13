@@ -17,28 +17,42 @@
 
 
 // 3.
-// const num = prompt('Введите целое число');
-// let numLengthResult;
-// switch (num.length) {
-//     case 1:
-//         numLengthResult = 'однозначное';
-//         break;
-//     case 2:
-//         numLengthResult = 'двухзначное';
-//         break;
-//     case 3:
-//         numLengthResult = 'трехзначное';
-//         break;
-//     default:
-//         numLengthResult = 'более чем трехзначное';
-// }
-//
-// let numSign = +num > 0 ? 'положительное' :
-//     +num < 0 ? 'отрицательное' :
-//         '';
-//
-//  alert(`Число ${num} ${numLengthResult} ${numSign}`);
+const num = prompt('Введите целое число');
+let numLengthResult;
 
+if (+num === 0) {
+    alert(`Число ${num} однозначное`);
+} else if ( +num > 0) {
+    switch (num.length) {
+    case 1:
+        numLengthResult = 'однозначное';
+        break;
+    case 2:
+        numLengthResult = 'двухзначное';
+        break;
+    case 3:
+        numLengthResult = 'трехзначное';
+        break;
+    default:
+        numLengthResult = 'более чем трехзначное';
+}
+    alert(`Число ${num} ${numLengthResult} положительное`);
+} else if ( +num < 0) {
+    switch (num.length) {
+        case 2:
+            numLengthResult = 'однозначное';
+            break;
+        case 3:
+            numLengthResult = 'двухзначное';
+            break;
+        case 4:
+            numLengthResult = 'трехзначное';
+            break;
+        default:
+            numLengthResult = 'более чем трехзначное';
+    }
+    alert(`Число ${num} ${numLengthResult} отрицательное`);
+}
 
  // 4.
 // const firstNumber = +prompt('Введите первое число');
